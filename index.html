@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume</title>
+
+        <link rel="stylesheet" href="style.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <style>
+        body{
+    margin: 0px;
+}
+
+header{
+    height: 65vh;
+    opacity: 0.9;
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;
+}
+
+div{
+    transition: 3s ease-in-out 2s;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.align-ul{
+    margin-left: 35vw;
+}
+section{
+    height: 65vh;
+}
+#skills-ul{
+    margin-left: 35vw;
+}
+#name{
+    text-align: center;
+    margin-top: 25vh;
+    color: lightgrey;
+    font-style: italic;
+    font-size: 150px;
+     transition: 2s ease-in-out;
+}
+/*
+#name:hover{
+    color: rgb(197, 197, 197);
+    transition: color 0.5s, underline 1s;
+    text-decoration: underline;
+}
+*/
+
+.horizontal-list{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li{
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+.horizontal-list li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu li a{
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover{
+    color: red;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+#about{
+    display: grid;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+.pg-list{
+    margin-left: 25vw;
+}
+.title-align{
+    margin-left: 25vw;
+}
+#competencies{
+    display: grid;
+}
+#education{
+    display: grid;
+}
+#pgskills{
+    display: grid;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+.pg-list, .tool-list, .favor-list {
+	padding: 0;
+	list-style: none;
+}
+.pg-list > li {	
+	margin: 1rem 0;
+	display: flex;
+	align-items: center;
+}
+.sb-skeleton {
+	position: relative;
+	flex: 1 0 auto;
+	height: 2px;
+	background-color: var(--color-gray-dark-3);
+}
+.pg-list > li > span {
+	flex: 0 0 100px;
+}
+.sb-skeleton > .skillbar {
+	position: absolute;
+	left: 0;
+	top: -1px;
+	width: var(--pgbar-length);
+	height: 4px;
+	background-color: #4682bf;
+}
+.tool-list {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.tool-list > li {
+	position: relative;
+	text-align: center;
+	flex: 0 0 25%;
+}
+.tool-list > li > svg {
+	position: relative;
+	fill: transparent;
+	width: 95%;
+	transform: rotate(-90deg);
+}
+.tool-list > li > svg > circle {
+	stroke-width: 1px;
+	stroke: #cdcdcd;
+}
+.tool-list > li > svg > circle.cbar {
+	stroke-width: 3px;
+	stroke: #4682bf;
+	stroke-linecap: round;
+	stroke-dashoffset: 0;
+	stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+	transition: all 0.8s;
+	transition-timing-function: cubic-bezier(.64,.51,.16,.86);
+}
+.tool-list > li:hover > svg > circle.cbar {
+	stroke-width: 4px;
+	stroke: var(--color-tiffany);
+	stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+}
+.tool-list > li > .tl-name,
+.tool-list > li > .tl-exp {
+	position: absolute;
+	left: 50%;
+	color: var(--color-gray-dark-1);
+}
+.tool-list > li > .tl-name {
+	top: 50%;
+	font-size: 1.2rem;
+	transform: translate(-50%, -50%);
+}
+.tool-list > li > .tl-exp {	
+	top: calc(50% + 1.4rem);
+	font-size: 1rem;
+	transform: translate(-50%, -50%);
+}
+#skills{
+    display: grid;
+}
+.headings{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* .opacity{
+    opacity: 0.5;
+} */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    section{
+        height: 50vh;
+        font-size: 10px;
+    }
+    #name{
+    font-size: 50px;
+    }
+    .headings{
+        font-size: 20px;
+    }
+    header{
+        height: 60vh;
+        font-size: 20px;
+    }
+    .align-ul{
+        margin-left: 10vw;
+    }
+  }
+
+ @media only screen and (min-width: 769px) {
+    /* For tablets: */
+    section{
+        height: 70vh;
+        font-size: 20px;
+    }
+    #name{
+    font-size: 90px;
+    }
+    .headings{
+        font-size: 30px;
+    }
+    header{
+        height: 70vh;
+        font-size: 30px;
+    }
+    .align-ul{
+        margin-left: 30vw;
+    }
+} 
+
+    </style>
+    <body>
+        <header>
+            <div>
+                <nav>
+                    <ul class="horizontal-list text-align nav-menu">
+                        <li>
+                            <a href="#"> <strong><h3>Home</strong></h3></a>
+                        </li>
+                        <li>
+                            <a href="#about"> <strong><h3>About</strong></h3></a>
+                        </li>
+                        <li>
+                            <a href="#education"><strong><h3>Education</strong></h3></a>
+                        </li>
+                        <li>
+                            <a href="#pgskills"><strong><h3>Programming knowledge</strong></h3></a>
+                        </li>
+                        <li>
+                            <a href="#skills"> <strong><h3>Skills</strong></h3></a>
+                        </li>
+        
+        
+                    </ul>
+        
+                </nav>
+                <p><h2 id="name">Dhruv Sharma</h2></p>
+            </div>
+        </header>
+        <main>
+            <section id="about">
+                <div>
+                    <h4 class="text-align headings">About</h4>
+                    <p class="text-align">
+                        Hi, I am dhruv. I am currently pursuing Bachelor’s in Engineering (B.E.) <br>
+                        in the field of Computer Science and Engineering. <br>I am proficient in C, C++, web development languages 
+                        and frameworks such as HTML, CSS, JavaScript. <br>I am currently learning front-end frameworks and <br>will learn back-end frameworks in upcoming course.
+                    </p>
+                </div>
+            </section>
+
+            <section id="education">
+                
+                <div>
+                    <h4 class="text-align headings">Education</h4>
+                    <ul class="align-ul">
+                        <li>
+                           <strong>Chitkara Institute of Engineering and Technology</strong> 
+                            <ul>
+                                <li>
+                                    B.E. CSE
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                           <strong>D.C Montessori Senior Secondry School</strong> 
+                            <ul>
+                                <li>
+                                    12th Standard
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Delhi Public School</strong> 
+                             <ul>
+                                 <li>
+                                     10th Standard
+                                 </li>
+                             </ul>
+                         </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="pgskills">
+                <div class="detail-section pg-skill">
+                    <div class="detail-title">
+                      <div class="title-icon">
+                        <i class="fas fa-laptop-code"></i>
+                      </div>
+                      <h4 class="title-align headings"><strong>Programming Knowledge</strong></h4>
+                    </div>
+                    <div class="detail-content">
+                      <ul class="pg-list">
+                        <li>
+                          <span>C</span>
+                          <div class="sb-skeleton">
+                            <div class="skillbar" style="--pgbar-length: 80%"></div>
+                          </div>
+                        </li>
+                        <li>
+                          <span>C++</span>
+                          <div class="sb-skeleton">
+                            <div class="skillbar" style="--pgbar-length: 75%"></div>
+                          </div>
+                        </li>
+                        <li>
+                          <span>HTML5</span>
+                          <div class="sb-skeleton">
+                            <div class="skillbar" style="--pgbar-length: 70%"></div>
+                          </div>
+                        </li>
+                        <li>
+                          <span>CSS3</span>
+                          <div class="sb-skeleton">
+                            <div class="skillbar" style="--pgbar-length: 70%"></div>
+                          </div>
+                        </li>
+                        <li>
+                          <span>Javascript</span>
+                          <div class="sb-skeleton">
+                            <div class="skillbar" style="--pgbar-length: 45%"></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+            <section id="skills">
+                <div>
+                    <h4 class="text-align headings">Hard and Soft Skills</h4>
+                    <ul class="align-ul">
+                        <li>
+                           Computer Skills
+                        </li>
+                        <br>
+                        <li>
+                           Communication Skills
+                        </li>
+                        <br>
+                        <li>
+                            Problem-Solving Abilities
+                         </li>
+                         <br>
+                         <li>
+                            Organization Skills
+                         </li>
+                         <br>
+                         <li>
+                            Flexibilty
+                         </li>
+                         <br>
+                    </ul>
+                </div>
+        </main>
+    </body>
+</html>
